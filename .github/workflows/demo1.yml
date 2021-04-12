@@ -31,7 +31,7 @@ jobs:
         
         
       # Copies all files from current directory i.e git-Azure to Azure Storage Account
-      - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.6
+      - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.8.0
         name: Copies files from git repo folder to Azure storage account
         with:
           source_dir: git-Azure
