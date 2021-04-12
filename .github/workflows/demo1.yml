@@ -31,8 +31,8 @@ jobs:
         
         
       # Copies all files from current directory i.e git-Azure to Azure Storage Account
-      - name: Copies files from git repo folder to Azure storage account
       - uses: bacongobbler/azure-blob-storage-upload@v1.1.1
+        name: Copies files from git repo folder to Azure storage account
         with:
           source_dir: .
           container_name: 'github-automation'
