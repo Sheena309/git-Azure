@@ -34,7 +34,7 @@ jobs:
       - uses: LanceMcCarthy/Action-AzureBlobUpload@v1.8.0
         name: Copies files from git repo folder to Azure storage account
         with:
-          source_dir: .
+          source_folder: .
           container_name: 'github-automation'
           folder: 'help'
           connection_string: ${{ secrets.CONNECTION_STRING }}
