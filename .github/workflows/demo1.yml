@@ -38,7 +38,7 @@ jobs:
           container_name: 'github-automation'
           folder: 'help'
           connection_string: ${{ secrets.ConnectionString }}
-          clean_destination_folder: 'false'
+          clean_destination_folder: false
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
