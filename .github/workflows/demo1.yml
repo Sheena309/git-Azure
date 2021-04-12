@@ -28,6 +28,17 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line Sheena script
         run: echo Hello, world. I am sheena!
+        
+        
+      # Copies all files from current directory i.e git-Azure to Azure Storage Account
+      - name: Copies files from git repo folder to Azure storage account
+      - uses: bacongobbler/azure-blob-storage-upload@v1.1.1
+        with:
+          source_dir: .
+          container_name: 'github-automation'
+          folder: 'help'
+          connection_string: ${{ secrets.ConnectionString }}
+          clean_destination_folder: 'false'
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
